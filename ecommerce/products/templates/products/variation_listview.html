@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+        {% block content %}
+<div class="row">
+<div class="container">
+<div class="col-sm-5">
+<table class="table table-responsive">
+{% for product in product_list %}
+    <tr>
+    <td><a href="/products/{{ product.pk }}/">{{ product.title }}</a></td>
+    <td>{{ product.sale_price }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.inventory }}</td>
+
+
+    </tr>
+    {% endfor %}
+</table>
+    </div>
+    </div>
+</div>
+
+{% endblock %}

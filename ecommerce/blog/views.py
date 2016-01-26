@@ -1,8 +1,9 @@
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Post
+from .forms import Post
 from .forms import PostForm
+
 
 def blog_create(request):
     title = 'Create'
@@ -61,3 +62,4 @@ def blog_delete(request, id=None):
     if instance.delete():
         messages.success(request, "Successfully Deleted")
     return redirect('blog:list')
+

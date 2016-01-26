@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+        {% block content %}
+<div class="row">
+<div class="container">
+<div class="col-sm-8 pull-left">
+
+
+
+    <h1>{{ product.title }}</h1><br> </hr>
+    {{ product.description }}</br></hr>
+    <h3>Price {{ product.active }}</h3><hr>
+
+
+
+    </div>
+    <div class="col-sm-4 pull-right">
+        <h1>Related Products</h1></br>
+        </hr>
+        <button class="btn btn-default" type="submit">Add to Cart!</button>
+
+
+    </div>
+    </div>
+</div>
+
+{% endblock %}
